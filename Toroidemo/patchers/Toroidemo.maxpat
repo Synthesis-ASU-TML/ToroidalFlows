@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 173.0, 79.0, 1002.0, 743.0 ],
+		"rect" : [ 463.0, 100.0, 1002.0, 743.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,137 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-84",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 824.0, 649.0, 131.0, 22.0 ],
+					"presentation_rect" : [ 806.0, 638.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "tracer set 3 0.1 0.1 0.5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-81",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 925.0, 705.0, 101.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.str.fromsymbol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-80",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 925.0, 678.0, 137.0, 22.0 ],
+					"style" : "",
+					"text" : "tracer addMulti 0. 0. 0.5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-78",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 925.0, 734.0, 159.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.net.send 127.0.0.1 10043"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-76",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 1122.5, 116.5, 53.0, 22.0 ],
+					"style" : "",
+					"text" : "sel char"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-75",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1122.5, 86.5, 64.0, 22.0 ],
+					"style" : "",
+					"text" : "route type"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-74",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1122.5, 59.5, 75.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.matrixinfo"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-73",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1071.5, 55.5, 29.5, 22.0 ],
+					"style" : "",
+					"text" : "t l l"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-72",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 1071.5, 150.5, 101.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.matrix @thru 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-71",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "jit_matrix", "", "" ],
+					"patching_rect" : [ 1071.5, 23.5, 102.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.net.recv 10043"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-110",
 					"maxclass" : "comment",
@@ -62,7 +193,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 519.0, 212.0, 180.0, 20.0 ],
 					"style" : "",
-					"text" : "This is PI : 3.14"
+					"text" : "tracer set 3 0.10 0.10 0.50"
 				}
 
 			}
@@ -120,32 +251,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-86",
-					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 832.0, 619.0, 40.0, 22.0 ],
-					"style" : "",
-					"text" : "atoi"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-79",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 927.0, 668.0, 53.0, 22.0 ],
-					"style" : "",
-					"text" : "connect"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-77",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -154,33 +259,6 @@
 					"patching_rect" : [ 903.0, 28.0, 89.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess start"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-74",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "list", "int" ],
-					"patching_rect" : [ 832.0, 704.0, 153.0, 35.0 ],
-					"style" : "",
-					"text" : "sadam.tcpClient 127.0.0.1 10042"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-73",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 832.0, 591.0, 113.0, 22.0 ],
-					"style" : "",
-					"text" : "This is PI : 3.14159"
 				}
 
 			}
@@ -1592,8 +1670,50 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-86", 0 ],
+					"destination" : [ "obj-73", 0 ],
+					"source" : [ "obj-71", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-96", 0 ],
+					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-72", 0 ],
+					"source" : [ "obj-73", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-74", 0 ],
 					"source" : [ "obj-73", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-75", 0 ],
+					"source" : [ "obj-74", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-76", 0 ],
+					"source" : [ "obj-75", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-72", 0 ],
+					"source" : [ "obj-76", 0 ]
 				}
 
 			}
@@ -1606,15 +1726,22 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-74", 0 ],
-					"source" : [ "obj-79", 0 ]
+					"destination" : [ "obj-81", 0 ],
+					"source" : [ "obj-80", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-74", 0 ],
-					"source" : [ "obj-86", 0 ]
+					"destination" : [ "obj-78", 0 ],
+					"source" : [ "obj-81", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-81", 0 ],
+					"source" : [ "obj-84", 0 ]
 				}
 
 			}
@@ -1670,77 +1797,77 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "torr.render.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particles.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.velocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.positions.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.colors.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.perturbed.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.tracer.perturbed.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.tracer.velocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.tracer.color.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "turtle.json",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/data",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/data",
 				"patcherrelativepath" : "../data",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.tracer.format.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/ToroidalFlows/Toroidemo/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1751,10 +1878,6 @@
 			}
 , 			{
 				"name" : "sadam.tcpServer.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "sadam.tcpClient.mxo",
 				"type" : "iLaX"
 			}
  ],
