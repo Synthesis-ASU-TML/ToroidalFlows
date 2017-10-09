@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 463.0, 100.0, 1002.0, 743.0 ],
+		"rect" : [ 404.0, 100.0, 1002.0, 743.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -44,7 +44,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 824.0, 649.0, 131.0, 22.0 ],
-					"presentation_rect" : [ 806.0, 638.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "tracer set 3 0.1 0.1 0.5"
 				}
@@ -66,13 +65,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-80",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 925.0, 678.0, 137.0, 22.0 ],
+					"patching_rect" : [ 925.0, 678.0, 272.0, 35.0 ],
 					"style" : "",
-					"text" : "tracer addMulti 0. 0. 0.5"
+					"text" : "tracer addMulti -0.1 0.1 0.5 -0.9 0.9 0.25 0.5 -0.5 0.75"
 				}
 
 			}
@@ -176,7 +176,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 530.0, 195.0, 160.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 519.0, 190.0, 180.0, 20.0 ],
+					"presentation_rect" : [ 519.0, 57.5, 180.0, 20.0 ],
 					"style" : "",
 					"text" : "Recent Network Messages"
 				}
@@ -186,14 +186,16 @@
 				"box" : 				{
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.58 ],
 					"id" : "obj-101",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 903.0, 198.0, 150.0, 20.0 ],
+					"patching_rect" : [ 903.0, 198.0, 150.0, 47.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 519.0, 212.0, 180.0, 20.0 ],
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 519.0, 79.5, 180.0, 33.0 ],
 					"style" : "",
-					"text" : "tracer set 3 0.10 0.10 0.50"
+					"text" : "tracer addMulti -0.10 0.10 0.50 -0.90 0.90 0.25 0.50 -0.50 0.75"
 				}
 
 			}
