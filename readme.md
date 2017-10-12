@@ -223,3 +223,68 @@ Using time-based blurring, creates a more surface-like appearance of the perturb
 ### 16 (Perturbed Blur w/ Tracers)
 
 Identical to the Perturbed Blur, with tracer addition enabled by default.
+
+# Network controls
+
+## Network Interfaces
+
+### UDP Messages
+
+Send control messages to port 10041 for normal udp packets.
+
+### TCP Messages
+
+Send control messages to port 100042 for normal TCP communication
+
+### Jitter Matrices
+
+Package data into a 1-plane char matrix for communication via jitter matrices. Control matrices should be sent to port 10043.
+
+## Control Messages
+
+For parameter changes, send the name of the parameter with the new value via the method of your choice. Some parameters have different names when communicating over the network, those will be explained below.
+
+### Perturbation Strengh (pStrength)
+
+Sets the degree to which the perturbation parameters feed the flow velocity. 
+Ex. pStrength 0.0 
+    Turns off perturbations
+pStrength 0.1
+    Turns on perturbations
+
+### Horizontal Swirl (horiz-swirl)
+
+Sets the amount motion in the XY plane of the model
+
+### Overturning Circulation (overturning)
+
+Sets the amount of motion in the Z component of the model
+
+### Vertical Strength (vert-strength)
+
+Sets the amount of vertical perturbation and compression
+
+### Time Dependent Variable (time-dep)
+
+Scales the time parameter in the perturbation.
+
+## Particle & Tracer Position Messages
+
+There are special messages for controlling or changing the placement of flow particles and tracer particles.
+
+### Add Tracer (tracer add)
+
+Adds a tracer particle at the current starting point. 
+
+### Add Multiple Tracers (tracer addMulti)
+
+Adds multiple tracers at given positions. Expects a list of triplets. each triplet should represent a 3 part vector of X,Y,Z position data. It is possible to add up to 100 tracers simultaneously with this command. (X,Y,Z)
+
+### Set Tracer Positions (tracer set)
+
+Sets multiple preexisting tracers to new positions. Expects a list of quadruplets. Each quadruplet should consist of the tracer index, and the new X,Y,Z position. (IDX,X,Y,Z)
+
+### Set Particle Positions (particles set)
+
+Sets multiple existing particle positions. Expects a list of quadruplets. Each quadruplet should contain the particle index and the new X,Y,Z position. (IDX,X,Y,Z)
+
